@@ -7,11 +7,10 @@
 
 task main()
 {
-//this is the program that runs the BATTLE BOTTTT 
+//this is the program that runs the BATTLE BOTTTT
 
-
-//first thing robot will do is move FORWARDS
-
+bool rightturnbool=false;
+bool leftturnbool=false
 
 while(true){
 			//if both sensors detect nothing move forwards
@@ -27,8 +26,7 @@ while(true){
 			if(lightsensorleft[sensorValue]>____ ){
 
 
-			motor[driveMotorright]=-90;
-
+			leftturnbool=true
 
 			}
 
@@ -37,38 +35,58 @@ while(true){
 	  	if(lightsensorRight[sensorValue]>____ ){
 
 
-			motor[driveMotorleft]=-90;
+			
+			Rightturnbool=true
 
 
 			}
 
 			//if the touch sensor is activated then beat up other robot
-			if(touchsensor===true){
+			if(touchsensor==true){
+			
+				nmotorencoder[fightarmMotor]=0;
+			nMotorEncoderTarget[ fightarmMotor]=90;
+			motor[ fightarmMotor]=100;	
 
-
-			nmotorencoder[fightarmMotor]=0;
-
-			nMotorEncoderTarget[ fightarmMotor]=45;
-			motor[ fightarmMotor]=100;
-
-
+			
 
 
 			}
-
-
+			
+			if(rightturnbool==true){
+				
+				for(int i=0; i<754; i++){
+			
+			
+			
+			motor[driveMotorright]=-90;
+			
+			
+			
+			}	
+			
+		}
+	
+			if(leftturnbool==true){
+				
+			
+		for(int i=0; i<754; i++){
+			
+			
+			
+			motor[driveMotorleft]=-90;
+			
+			
+			
+			}	
+			
+			
+		}
 
 
 
 
 
 }
-
-}
-
-
-
-
-
 
 }
